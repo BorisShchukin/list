@@ -47,6 +47,7 @@ addForm.addEventListener('submit', (evt) => {
   toggleEmptyListMessage(); //роверяется длина списка задач
   addFormInput.value = ''; //очистка поля ввода задачи
   counter.value = 0; // обнуляет счетчик символов при добавлении задачи
+  counter.style.color = 'black'; // обнуляет цвет счетчика символов при добавлении задачи
 });
 let counter = document.querySelector('.counter'); // счетчик символов воода 0
 
