@@ -30,6 +30,10 @@ for (let i = 0; i < items.length; i++) {
 }
 
 addForm.addEventListener('submit', (evt) => {
+  if (addFormInput.value.length > 30) {
+    //проверка что не больше 30 символов
+    return;
+  }
   // событие для формы отправки
   evt.preventDefault(); // отмена действия по умолчанию
 
@@ -56,4 +60,3 @@ addFormInput.addEventListener('input', () => {
     counter.style.color = 'black';
   }
 });
-console.log(textCounter);
