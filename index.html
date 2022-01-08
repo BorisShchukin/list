@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="keywords" content="список" />
+    <meta name="description" content="Список задач или покупок" />
+    <link rel="shortcut icon" href="https://img.icons8.com/ios/50/000000/tasklist.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style/style.css" />
+    <title>Список задач или покупок</title>
+  </head>
+  <body>
+    <div class="container">
+      <ul class="todo-list">
+        <li class="todo-list-item">
+          <label>
+            <input class="todo-list-input" type="checkbox" />
+            <span>Задач и покупок нет</span>
+          </label>
+        </li>
+      </ul>
+      <p class="empty-tasks hidden">Все задачи выполнены.</p>
+      <form class="add-form" method="get">
+        <input id="task-text" class="add-form-input" type="text" aria-label="Описание задачи" placeholder="Введите задачу или покупку" maxlength="30" required />
+
+        <button class="add-form-button" type="submit">Добавить</button>
+      </form>
+      <span class="text-counter">Использовано символов: <output class="counter" for="task-text">0</output>/30 </span>
+      <template id="task-template">
+        <li class="todo-list-item">
+          <label>
+            <input type="checkbox" class="todo-list-input" />
+            <span></span>
+          </label>
+        </li>
+      </template>
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>
